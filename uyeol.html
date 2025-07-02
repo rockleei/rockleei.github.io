@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arda Reşat | Üye Ol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="kodlar/css.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #252525, #5a5a5a, #131313);
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+
+    .kontainer {
+        max-width: 1000px;
+        padding: 40px;
+        margin-right: 75px;
+        background-color: #e9e6e6;
+        border-radius: 12px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .kontainer2 {
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+        font-size: 44px;
+        font-weight: 700;
+        color: #37474f;
+        margin-bottom: 30px;
+        border-bottom: 2px solid #1d1c1c;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .panel-sekli {
+        width: 1000px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .panel {
+        background-color: rgba(94, 80, 80, 0.95);
+        width: 280px;
+        padding: 15px;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .panel:hover {
+        background-color: #ad313177;
+    }
+
+    p {
+        font-size: 17px;
+        color: #616161;
+        margin-bottom: 20px;
+    }
+
+    h2{
+        border-bottom: 2px solid #1d1c1c;
+        display: inline-block;
+    }
+
+
+</style>
+<body>    
+    <!--mouseu takip eden kod başlangıcı-->
+    <div class="blob"></div>
+    <!--mouseu takip eden kod bitiş-->
+    <nav class="navbar w-100 navbar-expand-lg navbar-light navstyle mt-2">
+        <div class="container">
+            <a class="navbar-brand">Kişisel Websitem</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ustnavbar" aria-controls="ustnavbar" aria-expanded="false" aria-label="Navigasyon">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ustnavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="genel-bilgi.html">Genel Bilgi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobilerim.html">Hobilerim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="egitim-hayatim.html">Eğitim Hayatım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Üye Ol</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<br/> <br/>
+
+    <div class="kontainer">
+            <h1>Arda Reşat - Kişisel Web Sitesi</h1>
+            
+            <div class="panel-sekli">
+                <a href="genel-bilgi.html" class="panel">Genel Bilgi</a>
+                <a href="hobilerim.html" class="panel">Hobilerim</a>
+                <a href="egitim-hayatim.html" class="panel">Eğitim Hayatım</a>
+                <a href="uyeol.html" class="panel">Üye Ol</a>
+            </div>
+        <div class="kontainer2">
+
+            <!-- Üye Olma Formu -->
+            <h2>Üye Ol</h2>
+            <br/>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Kullanıcı Adı:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-posta:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Şifre:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-secondary">Üye Ol</button>
+            </form>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js" ></script>
+    <script src="kodlar/script.js"></script>
+</body>
+</html>
