@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="bootstrap/css.css">
 </head>
 <style>
+    .back-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #343a40;
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #495057;
+}
     body {
         background: linear-gradient(135deg, #252525, #5a5a5a, #131313);
         margin: 0;
@@ -150,6 +167,9 @@
             <li>10 Kişiydiler</li>
         </ul>
     </div>
+    <a href="index.html" class="back-button" style="margin-top:-80px;">
+  <i class="fas fa-arrow-left"></i>
+</a>
     <script src="bootstrap/bootstrap.bundle.js" ></script>
     <script src="bootstrap/script.js"></script>
 
