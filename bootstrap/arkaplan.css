@@ -1,0 +1,68 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+}
+.bar{
+    height: 200px;
+    width: 100%;
+    background-color:rgb(78, 80, 80) ;
+    color: aliceblue;
+}
+.barust{
+    height: 50px;
+    width: 100%;
+    background-color:rgb(78, 80, 80) ;
+}
+.bartext{
+    height: 50px;
+    width: 150px;
+    margin-left: 850px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.bartext2{
+    height: 50px;
+    width: 320px;
+    margin-left: 780px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.gelisme{
+    width: 100%;
+    height: 150px;
+    margin-top: 120px;
+}
+h3{
+    margin-left: 870px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+}
+h2{
+    margin-left: 870px;
+}
+.gelismetext{
+    width: 750px;
+    margin: auto;
+    margin-top: 25px;
+}
+.portfolyo{
+    background-color: rgb(247, 245, 245);
+    width: 100%;
+    height: 400px;
+}
+.portfolyoust{
+    height: 50px;
+    width: 100%;
+    background-color:rgb(247, 245, 245);
+}
+footer{
+    width: 100%;
+    height: 120px;
+    background-color: rgb(32, 32, 43);
+    text-align: center;
+    line-height: 120px;
+    color: aliceblue;
+}
