@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery 2. Hafta</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body class="w-75 mx-auto">
+    <script>
+        $(document).ready(function(){
+            $("#a1").hide();
+            $("#a2").hide();
+            $("#a3").hide();
+            $("#a4").hide();
+            $("#a5").hide();
+            $("#a6").hide();
+            $("#a7").hide();
+            $("#a8").hide();
+            $("#a9").hide();
+            $("#a10").hide();
+            $("#vrf").click(function(){
+                var choice1=$("[type='radio'][name='flexRadioDefault']:checked").val();
+                var choice2=$("[type='radio'][name='flexRadioDefault2']:checked").val();
+                var choice3=$("[type='radio'][name='flexRadioDefault3']:checked").val();
+                var choice4=$("[type='radio'][name='flexRadioDefault4']:checked").val();
+                var choice5=$("[type='radio'][name='flexRadioDefault5']:checked").val();
+                var choice6=$("[type='radio'][name='flexRadioDefault6']:checked").val();
+                var choice7=$("[type='radio'][name='flexRadioDefault7']:checked").val();
+                var choice8=$("[type='radio'][name='flexRadioDefault8']:checked").val();
+                var choice9=$("[type='radio'][name='flexRadioDefault9']:checked").val();
+                var choice10=$("[type='radio'][name='flexRadioDefault10']:checked").val();
+                if(choice1=="cita"){
+                    $("#a1").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a1").show().css({backgroundColor:"red"});
+                }
+                if(choice2=="gokdogan"){
+                    $("#a2").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a2").show().css({backgroundColor:"red"});
+                }
+                if(choice3=="dogru"){
+                    $("#a3").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a3").show().css({backgroundColor:"red"});
+                }
+                if(choice4=="mahmut"){
+                    $("#a4").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a4").show().css({backgroundColor:"red"});
+                }
+                if(choice5=="cin"){
+                    $("#a5").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a5").show().css({backgroundColor:"red"});
+                }
+                if(choice6=="kayseri"){
+                    $("#a6").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a6").show().css({backgroundColor:"red"});
+                }
+                if(choice7=="dogru2"){
+                    $("#a7").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a7").show().css({backgroundColor:"red"});
+                }
+                if(choice8=="dogru3"){
+                    $("#a8").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a8").show().css({backgroundColor:"red"});
+                }
+                if(choice9=="dogru4"){
+                    $("#a9").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a9").show().css({backgroundColor:"red"});
+                }
+                if(choice10=="dogru5"){
+                    $("#a10").show().css({backgroundColor:"green"});
+                }
+                else{
+                    $("#a10").show().css({backgroundColor:"red"});
+                }
+            });
+        });
+    </script>
+    
+    <div class="border p-5 mt-2">
+        <h2>Sınava Başlayabilirsiniz</h2>
+        <hr>
+        <!--Soru 1-->
+        <div class="row">
+            <div class="col-9 border p-3">
+                <div id="q1"><h5>Kara üzerindeki en hızlı hayvan nedir ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault" value="cita">
+                <label style="margin-right: 20px;">Çita</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault" value="at">
+                <label style="margin-right: 20px;">At</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault" value="kaplan">
+                <label style="margin-right: 20px;">Kaplan</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault" value="tavsan">
+                <label>Tavşan</label>
+            </div>
+
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a1">
+                Çita
+            </div>
+        </div>
+        <!--Soru 1 BİTİŞ-->
+
+        <!--Soru 2-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Hava üzerindeki en hızlı hayvan nedir ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault2" value="karga">
+                <label style="margin-right: 20px;">Karga</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault2" value="kanarya">
+                <label style="margin-right: 20px;">Kanarya</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault2" value="atmaca">
+                <label style="margin-right: 20px;">Atmaca</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault2" value="gokdogan">
+                <label>Gökdoğan</label>
+            </div>
+
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a2">
+                Gökdoğan
+            </div>
+        </div>
+        <!--Soru 2 BİTİŞ-->
+
+        <!--Soru 3-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Türkiye hangi 2 kıtayı birbirine bağlar ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault3">
+                <label style="margin-right: 20px;">Avrupa-Afrika</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault3">
+                <label style="margin-right: 20px;">Antarktika-Avustralya</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault3" value="dogru">
+                <label style="margin-right: 20px;">Asya-Avrupa</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault3">
+                <label>Güney Amerika-Kuzey Amerika</label>
+            </div>
+
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a3">
+                Asya-Avrupa
+            </div>
+        </div>
+        <!--Soru 3 BİTİŞ-->
+
+        <!--Soru 4-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Yeniçeri Ocağını hangi padişah kaldırmıştır ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault4" value="osman">
+                <label style="margin-right: 20px;">Genç Osman</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault4" value="fsm">
+                <label style="margin-right: 20px;">Fatih Sultan Mehmet</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault4" value="bayezid">
+                <label style="margin-right: 20px;">Yıldırım Bayezid</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault4" value="mahmut">
+                <label>II. Mahmut</label>
+            </div>
+
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a4">
+                II. Mahmut
+            </div>
+        </div>
+        <!--Soru 4 BİTİŞ-->
+
+        <!--Soru 5-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Çin Seddi hangi ülkededir ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault5" value="urdun">
+                <label style="margin-right: 20px;">Ürdün</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault5" value="cin">
+                <label style="margin-right: 20px;">Çin</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault5" value="filistin">
+                <label style="margin-right: 20px;">Filistin</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault5" value="misir">
+                <label>Mısır</label>
+            </div>
+        
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a5">
+                Çin
+            </div>
+        </div>
+        <!--Soru 5 BİTİŞ-->
+
+        <!--Soru 6-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Kayseri mantısı hangi ilindir ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault6" value="bursa">
+                <label style="margin-right: 20px;">Bursa</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault6" value="erzurum">
+                <label style="margin-right: 20px;">Erzurum</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault6" value="izmir">
+                <label style="margin-right: 20px;">İzmir</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault6" value="kayseri">
+                <label>Kayseri</label>
+            </div>
+        
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a6">
+                Kayseri
+            </div>
+        </div>
+        <!--Soru 6 BİTİŞ-->
+        
+                <!--Soru 7-->
+                <div class="row">
+                    <div class="col-9 border p-3 mt-2">
+                        <div id="q1"><h5>Hayal mi Gerçek mi Kimin filmidir ?</h5></div>
+                        <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault7" value="enes">
+                        <label style="margin-right: 20px;">Enes</label> 
+        
+                        <input type="radio" class="mt-3" name="flexRadioDefault7" value="batur">
+                        <label style="margin-right: 20px;">Batur</label>
+        
+                        <input type="radio" class="mt-3" name="flexRadioDefault7" value="ndng">
+                        <label style="margin-right: 20px;">Ndng-enes</label>
+        
+                        <input type="radio" class="mt-3" name="flexRadioDefault7" value="dogru2">
+                        <label>Enes batur</label>
+                    </div>
+                
+                    <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a7">
+                        Enes Batur
+                    </div>
+                </div>
+                <!--Soru 7 BİTİŞ-->
+                        <!--Soru 8-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Kayseri mantısı hangi ilindir ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault6" value="bursa">
+                <label style="margin-right: 20px;">Bursa</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault8" value="erzurum">
+                <label style="margin-right: 20px;">Erzurum</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault8" value="izmir">
+                <label style="margin-right: 20px;">İzmir</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault8" value="dogru3">
+                <label>Kayseri</label>
+            </div>
+        
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a8">
+                Kayseri
+            </div>
+        </div>
+        <!--Soru 8 BİTİŞ-->
+                <!--Soru 9-->
+                <div class="row">
+                    <div class="col-9 border p-3 mt-2">
+                        <div id="q1"><h5>Kayseri mantısı hangi ilindir ?</h5></div>
+                        <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault6" value="bursa">
+                        <label style="margin-right: 20px;">Bursa</label> 
+        
+                        <input type="radio" class="mt-3" name="flexRadioDefault9" value="erzurum">
+                        <label style="margin-right: 20px;">Erzurum</label>
+        
+                        <input type="radio" class="mt-3" name="flexRadioDefault9" value="izmir">
+                        <label style="margin-right: 20px;">İzmir</label>
+        
+                        <input type="radio" class="mt-3" name="flexRadioDefault9" value="dogru4">
+                        <label>Kayseri</label>
+                    </div>
+                
+                    <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a9">
+                        Kayseri
+                    </div>
+                </div>
+                <!--Soru 9 BİTİŞ-->
+                        <!--Soru 10-->
+        <div class="row">
+            <div class="col-9 border p-3 mt-2">
+                <div id="q1"><h5>Kayseri mantısı hangi ilindir ?</h5></div>
+                <input type="radio" class="mt-3" style="margin-left: 12px;" name="flexRadioDefault10" value="bursa">
+                <label style="margin-right: 20px;">Bursa</label> 
+
+                <input type="radio" class="mt-3" name="flexRadioDefault10" value="erzurum">
+                <label style="margin-right: 20px;">Erzurum</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault10" value="izmir">
+                <label style="margin-right: 20px;">İzmir</label>
+
+                <input type="radio" class="mt-3" name="flexRadioDefault10" value="dogru5">
+                <label>Kayseri</label>
+            </div>
+        
+            <div class="col-3 border p-3 mt-2" style="text-align: center; line-height: 50px; font-weight: bold;" id="a10">
+                Kayseri
+            </div>
+        </div>
+        <!--Soru 10 BİTİŞ-->
+
+        <button id="vrf" type="button" class="border border-secondary mt-4 rounded-3" style="width: 100%; height: 38px;">Doğrula</button>
+
+    </div>
+
+
+</body>
+</html>
