@@ -1,32 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeri</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-    <link href="gorseller">
-  <style>
-    .back-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background-color: #343a40;
-  color: white;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 20px;
-  transition: background-color 0.3s ease;
-}
 
-.back-button:hover {
-  background-color: #495057;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: linear-gradient(135deg, #ffc0cb, #dda0dd, #ff69b4);
@@ -34,30 +21,43 @@
       overflow-x: hidden;
       color: white;
       text-align: center;
-      padding: 30px 12px;
+      padding: 50px 20px;
     }
+
     h1 {
-      font-size: 2.3rem;
+      font-size: 3rem;
       margin-bottom: 30px;
     }
+
     .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 200px));
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 40px;
-}
-    .gallery img {
-      width: 200px;
-      height: 200px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 200px));
+      justify-content: center;
+      gap: 15px;
+      margin: 0 auto 40px;
+      max-width: 845px;
+    }
+
+    .gallery img,
+    .gallery .medya-video {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      aspect-ratio: 1 / 1;
+      height: auto;
       object-fit: cover;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
       transition: transform 0.3s;
     }
-    .gallery img:hover {
+
+    .gallery img:hover,
+    .gallery .medya-video:hover {
       transform: scale(1.30);
+      position: relative;
+      z-index: 2;
     }
+
     a.back-button {
       display: inline-block;
       margin-top: 30px;
@@ -69,9 +69,11 @@
       text-decoration: none;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
     }
+
     a.back-button:hover {
       background-color: #ff1493;
     }
+
     .hearts {
       position: fixed;
       width: 100%;
@@ -81,6 +83,7 @@
       left: 0;
       z-index: 999;
     }
+
     .heart {
       width: 20px;
       height: 20px;
@@ -89,6 +92,7 @@
       transform: rotate(45deg);
       animation: floatUp 5s linear infinite;
     }
+
     .heart:before,
     .heart:after {
       content: "";
@@ -98,25 +102,17 @@
       background: red;
       border-radius: 50%;
     }
+
     .heart:before {
       top: -10px;
       left: 0;
     }
+
     .heart:after {
       left: -10px;
       top: 0;
     }
-    .medya-video {
-    width: 200px;
-    height: 200px;
-    object-fit: cover; 
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
-      transition: transform 0.3s;
-}
-    .medya-video:hover {
-      transform: scale(1.30);
-    }
+
     @keyframes floatUp {
       0% {
         transform: translateY(100vh) scale(1) rotate(45deg);
@@ -127,66 +123,93 @@
         opacity: 0;
       }
     }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
     @keyframes pop {
-  0% { transform: scale(0.8); opacity: 0; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); }
-}
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 12px;
+      }
+
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+      }
+
+      .gallery img,
+      .gallery .medya-video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div id="hearts" class="hearts"></div>
-  <h1>Galeri </h1>
 
-    <div class="gallery">
-      <img src="gorseller/kuzum.jpg" alt="">
-      <video
-    class="medya-video"
-    controls
-    playsinline
-    preload="metadata"> <source src="./gorseller/kuzum2.mp4" type="video/mp4"> </video>
-      <img src="./gorseller/2b0b4d72be0d456f8dd9c4c9acbbb32a.webp" alt="">
-      <img src="gorseller/kuzum4.jpg" alt="">
-    </div>
+  <h1>Galeri</h1>
 
-    <br/><br/>
+  <div class="gallery">
+    <img src="gorseller/kuzum.jpg" alt="Kuzum">
+    <video class="medya-video" controls playsinline preload="metadata">
+      <source src="./gorseller/kuzum2.mp4" type="video/mp4">
+      Tarayıcınız video oynatmayı desteklemiyor.
+    </video>
+    <img src="./gorseller/2b0b4d72be0d456f8dd9c4c9acbbb32a.webp" alt="Fotoğraf">
+    <img src="gorseller/kuzum4.jpg" alt="Kuzum">
+  </div>
+
   <h1>Oyun</h1>
   <div class="gallery">
-      <img src="gorseller/gus.jpg" alt="">
-      <img src="gorseller/lunox.jpg" alt="">
-      <img src="gorseller/nolan.jpg" alt="">
-      <img src="gorseller/lilia.jpg" alt="">
-      <img src="gorseller/yin.jpg" alt="">
+    <img src="gorseller/gus.jpg" alt="Gusion">
+    <img src="gorseller/lunox.jpg" alt="Lunox">
+    <img src="gorseller/nolan.jpg" alt="Nolan">
+    <img src="gorseller/lilia.jpg" alt="Lilia">
+    <img src="gorseller/yin.jpg" alt="Yin">
   </div>
-  
-  <br/><br/>
-  <h1>Bonus </h1>
-    <div class="gallery">
-      <img src="gorseller/emoji1.png" alt="">
-      <img src="gorseller/kedi0.png" alt="">
-      <img src="gorseller/kuzukedi.jpg" alt="">
-      <img src="gorseller/kuzum3.jpg" alt="">
-      <img src="gorseller/kuzum5.jpg" alt="">
+
+  <h1>Bonus</h1>
+  <div class="gallery">
+    <img src="gorseller/emoji1.png" alt="Emoji">
+    <img src="gorseller/kedi0.png" alt="Kedi">
+    <img src="gorseller/kuzukedi.jpg" alt="Kuzukedi">
+    <img src="gorseller/kuzum3.jpg" alt="Kuzum">
+    <img src="gorseller/kuzum5.jpg" alt="Kuzum">
   </div>
 
   <a href="kuzu.html" class="back-button">Geri Dön</a>
- 
 
   <script>
     const heartsContainer = document.getElementById('hearts');
+
     function createHeart() {
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
       heartsContainer.appendChild(heart);
+
       setTimeout(() => heart.remove(), 5000);
     }
+
     setInterval(createHeart, 300);
   </script>
 </body>
 </html>
+```
